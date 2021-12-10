@@ -1,0 +1,339 @@
+
+\data\
+ngram 1=67
+ngram 2=200
+ngram 3=59
+
+\1-grams:
+-0.965726	</s>
+-99	<s>	-0.3683485
+-1.73965	a	-0.1512127
+-2.014529	ah	-0.1974894
+-2.014529	and	-0.1974894
+-2.064354	ar3	-0.2168319
+-1.879043	ball	-0.1093957
+-1.879043	block	-0.1093957
+-1.634294	can	-0.2267111
+-2.064354	claw	-0.2806368
+-2.064354	could	-0.2806368
+-1.23499	degrees	-0.3429253
+-2.064354	do	-0.2806368
+-1.73965	down	-0.2370763
+-2.064354	drop	-0.2806368
+-2.064354	eighty	-0.2511165
+-1.879043	fifteen	-0.1093957
+-2.014529	fifty	-0.1974894
+-1.73965	five	-0.2343345
+-2.014529	forty	-0.1974894
+-2.014529	fourty	-0.1974894
+-2.064354	get	-0.2511165
+-2.064354	gimme	-0.2806368
+-1.73965	give	-0.142521
+-2.014529	go	-0.1974894
+-1.879043	grab	-0.1298011
+-1.73965	hand	-0.142521
+-2.014529	hey	-0.1974894
+-2.014529	hundred	-0.1974894
+-1.478709	it	-0.2414475
+-1.879043	left	-0.216832
+-2.064354	let	-0.2806368
+-1.879043	me	-0.2370763
+-2.014529	mind	-0.1974894
+-1.879043	move	-0.2370763
+-2.064354	never	-0.2806368
+-2.064354	ninety	-0.2806368
+-2.064354	now	-0.1974894
+-2.014529	object	-0.1974894
+-2.014529	of	-0.1974894
+-1.73965	one	-0.2370763
+-2.014529	open	-0.1974894
+-1.73965	pick	-0.2343345
+-1.73965	please	-0.2288649
+-2.064354	release	-0.1974894
+-1.73965	right	-0.2234758
+-1.73965	set	-0.1700455
+-2.014529	seventy	-0.1974894
+-2.014529	six	-0.1974894
+-2.064354	sixty	-0.1974894
+-2.064354	ten	-0.2806368
+-1.879043	that	-0.2370763
+-1.23499	the	-0.2484379
+-1.879043	thirty	-0.2511165
+-2.014529	three	-0.1974894
+-1.73965	to	-0.1298011
+-2.064354	turn	-0.2168319
+-2.064354	twelve	-0.2806368
+-1.73965	twenty	-0.2343345
+-2.014529	two	-0.1974894
+-1.879043	uh	-0.1974894
+-1.879043	uhh	-0.1974894
+-2.064354	um	-0.1974894
+-2.064354	umm	-0.1974894
+-1.73965	up	-0.2370763
+-2.064354	you	-0.1974894
+-2.014529	your	-0.1974894
+
+\2-grams:
+-2.06837	<s> ah
+-0.5215817	<s> ar3	-0.2080295
+-1.843403	<s> can
+-2.091809	<s> could
+-2.091809	<s> do
+-1.819265	<s> drop
+-1.819265	<s> get
+-1.819265	<s> gimme	-0.2036809
+-1.913621	<s> give
+-1.863099	<s> grab	-0.118863
+-1.913621	<s> hand
+-1.914012	<s> hey	-0.1544662
+-1.930306	<s> let	-0.1544663
+-1.131081	<s> move	-0.078393
+-2.091809	<s> never
+-2.091809	<s> now
+-1.914012	<s> open	-0.1127158
+-1.913621	<s> pick
+-1.800061	<s> please	-0.1199468
+-2.091809	<s> release
+-1.71518	<s> set
+-1.319798	<s> turn
+-1.863099	<s> uh
+-1.863099	<s> uhh
+-1.819265	<s> um
+-2.091809	<s> umm
+-1.111909	a can
+-0.9275168	a hundred	-0.1122951
+-1.132212	a one
+-1.169252	a three
+-0.3624528	ah </s>
+-0.4273968	and fifteen
+-0.902477	ar3 </s>
+-1.551753	ar3 could
+-1.551753	ar3 do
+-1.551753	ar3 drop
+-1.551753	ar3 gimme	-0.2036809
+-1.469922	ar3 give
+-1.469922	ar3 hand
+-1.170604	ar3 move
+-1.551753	ar3 never
+-1.551753	ar3 now
+-1.469922	ar3 please
+-1.469922	ar3 set
+-1.551753	ar3 turn	-0.1081319
+-1.510666	ar3 uh
+-0.5131616	ball </s>
+-0.5131616	block </s>
+-0.4003272	can </s>
+-1.106832	can you
+-0.2735429	claw </s>
+-0.3183245	could you
+-0.3354587	degrees </s>
+-1.590613	degrees down
+-1.630828	degrees left
+-1.590613	degrees right	-0.2036809
+-1.397086	degrees to	-0.279405
+-1.630828	degrees uhh
+-1.397086	degrees up	-0.1544663
+-0.3138061	do a
+-0.5219089	down </s>
+-1.016186	down ten	-0.2036809
+-0.9028478	down the	-0.0783876
+-0.5928047	drop it	-0.2036809
+-0.5710785	drop the	-0.203681
+-0.7387597	eighty </s>
+-0.4559835	eighty degrees	-0.1225218
+-0.5719922	fifteen degrees	-0.08207104
+-0.4237255	fifty five
+-0.3458801	five degrees	-0.2036809
+-0.4237255	forty five
+-0.3954212	fourty degrees
+-0.8887198	get that
+-0.4559835	get the
+-0.2954491	gimme the	-0.07892142
+-1.01324	give it
+-0.8443032	give me	-0.1056534
+-0.9392891	give the
+-0.4300155	go of	-0.1008194
+-0.9950574	grab that
+-0.6774154	grab the	-0.1544663
+-0.8209782	hand </s>
+-1.01324	hand it
+-0.8443032	hand me	-0.1544663
+-0.4307938	hey ar3
+-0.7239298	hundred and
+-0.7116396	hundred twenty	-0.2036809
+-0.5223722	it </s>
+-1.20313	it down	-0.2036809
+-0.8343585	it to	-0.2036809
+-0.7335995	left </s>
+-1.28783	left fifty
+-1.24621	left five
+-1.28783	left seventy
+-1.28783	left six
+-1.270089	left thirty
+-1.293224	left twelve
+-0.3178283	let go	-0.279405
+-0.8123776	me </s>
+-0.9562976	me it
+-0.5659034	me the	-0.05714766
+-0.3624528	mind </s>
+-1.476422	move a
+-1.154619	move down	-0.2036809
+-1.546083	move forty
+-1.17296	move left
+-1.555457	move ninety
+-1.476422	move one
+-1.154619	move right
+-1.555457	move ten
+-1.515837	move thirty
+-1.476422	move to
+-1.555457	move twelve
+-1.154619	move up
+-0.3178283	never mind	-0.203681
+-0.2954491	ninety degrees
+-0.8952842	now get
+-0.8749996	now hand
+-0.8952842	now release
+-0.3624528	object </s>
+-0.690862	of it	-0.1544663
+-0.6582998	of the
+-0.6144363	one eighty
+-1.004365	one fifteen
+-0.9918401	one twenty
+-0.6582998	open the
+-0.7239298	open your
+-0.3689406	pick up	-0.08382041
+-1.076607	please give
+-1.092176	please grab
+-1.076607	please pick
+-0.6965091	please set	-0.2036809
+-0.690862	release it
+-0.6582998	release the
+-0.6510373	right </s>
+-1.176015	right fourty
+-1.143975	right one
+-1.180116	right sixty
+-1.180116	right um
+-0.8359014	set down	-0.279405
+-0.6719547	set it	-0.2036809
+-0.3954212	seventy degrees
+-0.3954212	six degrees
+-0.599695	sixty </s>
+-0.7239298	sixty two
+-0.2954491	ten degrees	-0.08207104
+-1.004365	that ball
+-1.004365	that block
+-0.5995865	that can	-0.203681
+-0.8712628	the ball	-0.6315875
+-1.405977	the block	-0.1544663
+-0.8534122	the can	-0.580435
+-1.29933	the claw	-0.2036809
+-1.604577	the left
+-1.640976	the object
+-1.557876	the right	-0.1544662
+-1.604577	the uh
+-1.604577	the uhh
+-1.652364	the umm
+-0.4559835	thirty degrees
+-0.879394	thirty five
+-0.4307938	three sixty
+-0.9950574	to me	-0.2036809
+-0.6774154	to the	-0.279405
+-0.905794	turn eighty	-0.2036809
+-1.293224	turn ninety
+-1.24621	turn one
+-1.24621	turn right
+-1.270089	turn thirty
+-1.24621	turn to	-0.1544663
+-1.24621	turn twenty
+-0.2954491	twelve degrees
+-0.3458801	twenty degrees	-0.03939418
+-0.3954212	two degrees
+-0.8484778	uh </s>
+-1.056469	uh can
+-1.072453	uh pick
+-1.072453	uh please
+-1.072453	uh set
+-0.8484778	uhh </s>
+-1.089049	uhh ball
+-1.104859	uhh let
+-1.089049	uhh move
+-1.072453	uhh up
+-0.7201788	um </s>
+-0.8749996	um a
+-0.8749996	um please
+-0.599695	umm </s>
+-0.7187924	umm block
+-0.7406921	up </s>
+-0.8875931	up a
+-1.273053	up fifteen
+-1.273053	up that
+-1.100198	up the	-0.2036809
+-1.250081	up twenty
+-0.8749996	you give
+-0.8854584	you grab
+-0.8749996	you pick
+-0.7254624	your claw
+-0.7116396	your hand
+
+\3-grams:
+-1.370443	<s> ar3 drop
+-1.370443	<s> ar3 gimme
+-1.340079	<s> ar3 hand
+-0.5947593	<s> ar3 move
+-1.370443	<s> ar3 now
+-1.069684	<s> ar3 turn
+-0.07671028	the ball </s>
+-0.2888134	the block </s>
+-0.2053384	that can </s>
+-0.07480874	the can </s>
+-0.1501984	the claw </s>
+-0.559026	eighty degrees to
+-0.2560583	fifteen degrees </s>
+-0.322248	five degrees </s>
+-0.6919855	five degrees right
+-0.2560583	ten degrees </s>
+-0.2936617	twenty degrees </s>
+-0.2498951	it down </s>
+-0.3618681	move down ten
+-0.267445	set down the
+-0.226716	turn eighty degrees
+-0.1603776	<s> gimme the
+-0.1603776	ar3 gimme the
+-0.1741081	let go of
+-0.499817	<s> grab that
+-0.2524657	<s> hey ar3
+-0.4226975	a hundred twenty
+-0.25005	drop it </s>
+-0.2926398	of it </s>
+-0.3834624	set it down
+-0.1962998	<s> let go
+-0.367567	give me the
+-0.3100865	hand me the
+-0.3272209	to me </s>
+-0.1898158	never mind </s>
+-0.850615	<s> move right
+-0.850615	<s> move up
+-0.4332993	go of it
+-0.4268305	<s> open your
+-0.5158027	<s> please give
+-0.2889563	degrees right </s>
+-0.3412343	the right </s>
+-0.3319342	please set down
+-0.1603776	down ten degrees
+-0.5495257	down the can
+-0.3386433	drop the ball
+-0.5554521	gimme the ball
+-0.4050055	grab the ball
+-0.6087725	me the can
+-0.4256229	to the left
+-0.8969434	to the right
+-0.3353118	up the can
+-0.2328987	degrees to the
+-0.3588759	it to me
+-0.3501117	turn to the
+-0.5773597	ar3 turn to
+-0.1827711	hundred twenty degrees
+-0.3699779	degrees up </s>
+-0.6180156	pick up the
+
+\end\
