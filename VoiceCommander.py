@@ -1,3 +1,4 @@
+from typing import Dict
 from pocketsphinx import LiveSpeech
 from enum import Enum
 from word2number import w2n
@@ -5,7 +6,7 @@ from word2number import w2n
 
 class VoiceCommandException(Exception):
     pass
-class NotRecognizedError(VoiceCommandException):
+class OpenError(VoiceCommandException):
     pass
 class MoveError(VoiceCommandException):
     pass
@@ -15,15 +16,25 @@ class SetDownError(VoiceCommandException):
     pass
 class GiveError(VoiceCommandException):
     pass
+class NotRecognizedError(VoiceCommandException):
+    pass
 
+
+
+# To add a new voice command, item, etc.:
+# 1. Add to Enum
+# 2. Add words to word list
+# 3. Add the function to VoiceCommander
+# 4. Add to VoiceCommander.voiceCmdFunc
 
 class VoiceCmd(Enum):
-    RELEASE     = 0     # Open the claw
-    MOVE        = 1     # Move/turn by a stated degree amount and direction
-    PICKUP      = 2     # Pick up a stated item
-    SETDOWN     = 3     # Set down the currently held item
-    GIVE        = 4     # Give the operator a stated item
-    NONE        = 5
+    OPEN        = 0     # Open the claw
+    CLOSE       = 1     # Close the claw
+    MOVE        = 2     # Move/turn by a stated degree amount and direction
+    PICKUP      = 3     # Pick up a stated item
+    SETDOWN     = 4     # Set down the currently held item
+    GIVE        = 5     # Give the operator a stated item
+    NONE        = 6
 
 class Item(Enum):
     CAN         = 0
@@ -46,8 +57,9 @@ class WordsType(Enum):
 
 
 VoiceCmdWords   = [ ['drop', 'let', 'open', 'release'],
+                    ['close', 'grab', 'grasp'],
                     ['move', 'turn', 'rotate'],
-                    ['pick', 'grab', 'take', 'get'],
+                    ['pick', 'take', 'get'],
                     ['set', 'put', 'leave'],
                     ['give', 'gimme', 'hand', 'hand it', 'hand me', 'pass'] ]
         
@@ -60,18 +72,21 @@ DirectionWords  = [ ['left', 'clockwise'],
                     ['up'],
                     ['down'] ]
 
-# Used for choosing which set of word lists to use
+# Used for choosing which set of word lists to use for word parsing
 EnumType = [VoiceCmd, Item, Direction]
 Words = [VoiceCmdWords, ItemWords, DirectionWords]
 
-WakeWord = 'ar3'
+WakeWord        = 'ar3'
+LanguageModel   = 'ar3.lm'
+Dict            = 'ar3.dict'
 
 
 class VoiceCommander:
     
     def __init__(self):
 
-        self.VoiceCmdFunc   = [ self.release,
+        self.VoiceCmdFunc   = [ self.open,
+                                self.close,
                                 self.move,
                                 self.pickUp,
                                 self.setDown,
@@ -82,19 +97,33 @@ class VoiceCommander:
         self.currentPhrase = None  # Most recent phrase heard
 
 
-    def nothing(self):
-        
-        raise NotRecognizedError('No voice command was recognized')
+    def open(self):
 
+        requestedItem = self.parseWords(WordsType.ITEM)
 
-    def release(self):
-        
-        print('Attempting to release the claw')
+        if requestedItem != self.holdingItem:
+            if requestedItem != Item.NONE:
+                raise OpenError(f'Unable to drop {requestedItem} because currently holding {self.holdingItem}')
+
+        print('Attempting to open the claw')
 
         # Send command to action server to open the claw
 
-        # If successful, set self.holdingItem
+        # If successful, set self.holdingItem to nothing
         self.holdingItem = Item.NONE
+
+
+    def close(self):
+
+        print('Attempting to close the claw')
+
+        # Send command to action server to close the claw
+
+        # Ask ? if the hand is now grabbing an object
+            # If so, ask video recognition what the object is
+
+        # For now, just assume it grabbed a can
+        self.holdingItem = Item.CAN
 
 
     def move(self):
@@ -128,13 +157,23 @@ class VoiceCommander:
 
         print(f'Attempting to pick up {requestedItem}')
 
+        # Send command to action server to open the claw
+
         # Ask video recognition topic for position of requested item
 
-        # Send command to action server to move arm to that position
+        # Move to current item position, checking if it has moved
+        # While robot hand is beyond some threshold distance to the item
 
-        # Send command to action server to grab the item
+            # Ask video recognition topic for position of item
 
-        # If successful, set self.holdingItem
+            # If the item has moved by some threshold distance 
+            # (this has to be true at least once in order to work -- set intial value arbitrarily high)
+            
+                # Send command to action server to move to that position
+
+        # Send command to action server to close the claw
+
+        # If all successful, set self.holdingItem
         self.holdingItem = requestedItem
 
 
@@ -156,9 +195,9 @@ class VoiceCommander:
 
         # Send command to action server to go down to the table/surface
 
-        # Send command to action server to release the claw
+        # Send command to action server to open the claw
 
-        # If successful, set self.holdingItem
+        # If successful, set self.holdingItem to nothing
         self.holdingItem = Item.NONE
 
 
@@ -197,7 +236,13 @@ class VoiceCommander:
         # While item has not yet been grabbed by user
             # Ask ? whether the item is being grabbed by user
 
-        self.release()
+        # Send command to action server to open the claw
+
+
+    def nothing(self):
+        
+        raise NotRecognizedError('No voice command was recognized')
+
 
 
     def parseWords(self, wordsType):
@@ -227,8 +272,8 @@ class VoiceCommander:
     def run(self):
 
         speech = LiveSpeech(
-            lm='/home/daniel/Courses/SeniorDesign/voiceCommands/PocketsphinxPython/main/ar3.lm',
-            dic='/home/daniel/Courses/SeniorDesign/voiceCommands/PocketsphinxPython/main/ar3.dict'
+            lm=LanguageModel,
+            dic=Dict
         )
 
         print(f"Listening for the wake word '{WakeWord}'...")

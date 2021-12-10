@@ -17,7 +17,7 @@ gimme the ball
 let go of it
 ar3 drop it
 open the claw
-open your claw
+ar3 open your claw
 open your hand
 release the claw
 ar3 now release it
