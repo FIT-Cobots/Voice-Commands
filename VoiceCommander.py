@@ -206,6 +206,7 @@ class VoiceCommander:
 
             enumType = EnumType[wordsType.value]
 
+            # Search for any command word in currentPhrase
             for i, wordList in enumerate(Words[wordsType.value]):
                 for word in wordList:
                     if word in self.currentPhrase:
