@@ -22,7 +22,6 @@ sudo apt install libasound2-dev
 ```
 
 3.1 Install the Python module word2number
-Install the Python module word2number
 ```
 pip install word2number
 ```
