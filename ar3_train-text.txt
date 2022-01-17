@@ -2,7 +2,7 @@ ar3
 hey ar3
 can you pick up the can
 grab that block
-ar3 give me the ball
+give me the ball
 drop the ball
 let go of the block
 pick up that can
@@ -14,19 +14,22 @@ ar3 gimme the ball
 gimme the can
 ar3 gimme the block
 gimme the ball
+take the can
+take it
+can you take the object
 let go of it
 ar3 drop it
 open the claw
-ar3 open your claw
+open your claw
 open your hand
 release the claw
-ar3 now release it
+now release it
 let go of it
 uh set it down
-ar3 set down the can
+set down the can
 turn ninety degrees to the left
 ar3 move forty five degrees right
-ar3 move up fifteen degrees
+move up fifteen degrees
 move down ten degrees
 turn twenty degrees to the right
 hey ar3 move thirty degrees left
@@ -36,48 +39,120 @@ please give me it
 um please pick up the can
 ar3 please grab the ball
 grab the ball
+put the can down
+put down the block
+leave it
+leave the object
 get the block
 get that can
 uh pick up a can
 now get the uhh ball
-ar3 now hand me the umm block
+now hand me the umm block
 drop it
 uhh let go of it
 set it down
 please set down the object
 ar3 drop the ball
+drop it
+twist it
+pull it
+bop it
 ar3 uh please set down the can
-ar3 hand it to me
+hand it to me
 hand me the uh can
 please give the can
 grab that ball
 move left five degrees
-ar3 turn to the left six degrees
+turn to the left six degrees
 move right um a hundred twenty degrees
 move ninety degrees uhh up
 turn thirty five degrees right
-ar3 move to the left twelve degrees
+move to the left twelve degrees
 move up a hundred and fifteen degrees
-ar3 move down ten degrees
-ar3 move ten degrees down
+move down ten degrees
+move ten degrees down
 turn one eighty degrees
-ar3 move right one twenty degrees
+move right one twenty degrees
 ar3 move one fifteen degrees up
 turn eighty degrees to the right
-ar3 turn to the left thirty degrees
+turn to the left thirty degrees
 move up twenty degrees
 move right fourty degrees
-ar3 turn to the left fifty five degrees
+rotate right twenty five degrees
+rotate to the left thirty nine degrees
+turn to the left fifty five degrees
 turn right sixty two degrees
-ar3 do a one eighty
+do a one eighty
+close
+close the claw
+ar3 close
+grasp the object
+grasp it
+firmly grasp it
+grasp your claw
 do a three sixty
-ar3 move left seventy degrees
-ar3 turn eighty degrees to the right
+move left seventy degrees
+turn eighty degrees to the right
 move a hundred twenty degrees up
 never mind
+ignore
 ar3 never mind
+wait
+wait no
+no wait
+here are some words and phrases
+to expand the language model's possible words
+this reduces the false positive rate of the model
+without these extra useless words
+if the operator says something outside
+of this lanugage model
+it will do its best to shoehorn the
+spoken phrase into something
+that it is familiar with
+that is why I am training the model
+with all of this irrelevant stuff
+it needs to be able to recognize things that
+have nothing to do with the task at hand
+I can type whatever I want here
+doesn't matter what I write as long as it's English
+below are some filler words
 um
 umm
 uhh
 uh
 ah
+here are some phrases that sound similar to ar3
+to minimize false positives for the wake word
+hey are we
+ay are you free
+hey are you free
+hey are free
+hey three
+ay are
+ay ree
+hey ree
+are three
+words
+other words
+I'm gonna list a couple of fruits here
+apricot
+apple
+banana
+orange
+pear
+my favorite fruit is banana
+maybe we should train the arm to
+peel a banana
+that would need two arms though and
+I don't know if we're still doing that
+we could also have it cut an apple or something
+it would be dangerous but also very fun
+on second thought it might raise ethical concerns
+what if the robot stabbed someone
+that would be on our conscience
+and our robot would forever live in infamy
+so maybe we shouldn't have the robot use a knife
+nice
+good job
+fantastic
+cool

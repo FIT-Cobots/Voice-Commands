@@ -28,19 +28,21 @@ class NotRecognizedError(VoiceCommandException):
 # 4. Add to VoiceCommander.voiceCmdFunc
 
 class VoiceCmd(Enum):
-    OPEN        = 0     # Open the claw
-    CLOSE       = 1     # Close the claw
-    MOVE        = 2     # Move/turn by a stated degree amount and direction
-    PICKUP      = 3     # Pick up a stated item
-    SETDOWN     = 4     # Set down the currently held item
-    GIVE        = 5     # Give the operator a stated item
-    NONE        = 6
+    IGNORE      = 0     # Do not try to execute a command
+    OPEN        = 1     # Open the claw
+    CLOSE       = 2     # Close the claw
+    MOVE        = 3     # Move/turn by a stated degree amount and direction
+    PICKUP      = 4     # Pick up a stated item
+    SETDOWN     = 5     # Set down the currently held item
+    GIVE        = 6     # Give the operator a stated item
+    NONE        = 7
 
 class Item(Enum):
     CAN         = 0
     BLOCK       = 1
     BALL        = 2
-    NONE        = 3
+    UNKNOWN     = 3
+    NONE        = 4
 
 class Direction(Enum):
     LEFT        = 0
@@ -56,16 +58,18 @@ class WordsType(Enum):
     DEGREES     = 3
 
 
-VoiceCmdWords   = [ ['drop', 'let', 'open', 'release'],
-                    ['close', 'grab', 'grasp'],
+VoiceCmdWords   = [ ['ignore', 'never mind', 'wait'],
+                    ['drop', 'let it', 'let go', 'open', 'release'],
+                    ['close', 'grab', 'grasp', 'take'],
                     ['move', 'turn', 'rotate'],
-                    ['pick', 'take', 'get'],
+                    ['pick', 'get'],
                     ['set', 'put', 'leave'],
-                    ['give', 'gimme', 'hand', 'hand it', 'hand me', 'pass'] ]
+                    ['give', 'gimme', 'hand the', 'hand it', 'hand me', 'pass'] ]
         
 ItemWords       = [ ['a can', 'the can', 'that can', 'this can', 'soda can'],
                     ['block', 'cube'],
-                    ['ball', 'sphere'] ]
+                    ['ball', 'sphere'],
+                    ['it'] ]
 
 DirectionWords  = [ ['left', 'clockwise'],
                     ['right', 'counter clockwise'],
@@ -85,7 +89,8 @@ class VoiceCommander:
     
     def __init__(self):
 
-        self.VoiceCmdFunc   = [ self.open,
+        self.VoiceCmdFunc   = [ self.ignore,
+                                self.open,
                                 self.close,
                                 self.move,
                                 self.pickUp,
@@ -101,11 +106,16 @@ class VoiceCommander:
 
         requestedItem = self.parseWords(WordsType.ITEM)
 
-        if requestedItem != self.holdingItem:
-            if requestedItem != Item.NONE:
+        if requestedItem != Item.NONE:
+            if requestedItem != self.holdingItem:
                 raise OpenError(f'Unable to drop {requestedItem} because currently holding {self.holdingItem}')
+            
+        if self.holdingItem == Item.NONE:
+            print('Attempting to open the claw')
+        else:
+            print(f'Attempting to drop the {self.holdingItem}')
 
-        print('Attempting to open the claw')
+
 
         # Send command to action server to open the claw
 
@@ -122,20 +132,20 @@ class VoiceCommander:
         # Ask ? if the hand is now grabbing an object
             # If so, ask video recognition what the object is
 
-        # For now, just assume it grabbed a can
-        self.holdingItem = Item.CAN
+        self.holdingItem = Item.UNKNOWN
 
 
     def move(self):
         
-        degrees     = self.parseWords(WordsType.DEGREES)
-        direction   = self.parseWords(WordsType.DIRECTION)
+        degrees = self.parseWords(WordsType.DEGREES)
+        direction = self.parseWords(WordsType.DIRECTION)
         
         if direction == Direction.NONE:
             if degrees % 180 == 0:
-                # If a multiple of 180, left/right does not matter
+                # Left/right does not matter
                 direction = Direction.LEFT
-            raise MoveError('A direction to turn must be specified')
+            else:
+                raise MoveError('A direction to turn must be specified')
 
         print(f'Attempting to move {degrees} degrees {direction}')
 
@@ -239,34 +249,31 @@ class VoiceCommander:
         # Send command to action server to open the claw
 
 
+    def ignore(self):
+        
+        print('Ignoring')
+
+
     def nothing(self):
         
         raise NotRecognizedError('No voice command was recognized')
 
 
-
     def parseWords(self, wordsType):
 
-        if wordsType != WordsType.DEGREES:
+        if wordsType == WordsType.DEGREES:
+            try:
+                return w2n.word_to_num(self.currentPhrase.replace('a hundred', 'one hundred'))
+            except Exception:
+                raise MoveError('Failed to interpret number of degrees')
 
-            enumType = EnumType[wordsType.value]
+        # Search for any command word in currentPhrase
+        for i, wordList in enumerate(Words[wordsType.value]):
+            for word in wordList:
+                if word in self.currentPhrase:
+                    return EnumType[wordsType.value](i)
 
-            # Search for any command word in currentPhrase
-            for i, wordList in enumerate(Words[wordsType.value]):
-                for word in wordList:
-                    if word in self.currentPhrase:
-                        return enumType(i)
-
-            return enumType.NONE
-
-
-        phrase = self.currentPhrase
-        phrase = phrase.replace('a hundred', 'one hundred')
-
-        try:
-            return w2n.word_to_num(phrase)
-        except Exception:
-            raise MoveError('Failed to interpret number of degrees')
+        return EnumType[wordsType.value].NONE
 
 
     def run(self):
