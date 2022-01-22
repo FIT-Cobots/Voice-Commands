@@ -1,4 +1,9 @@
-from typing import Dict
+import rclpy
+from rclpy.node import Node
+from text_to_speech import speak
+
+
+import random
 from pocketsphinx import LiveSpeech
 from enum import Enum
 from word2number import w2n
@@ -20,12 +25,18 @@ class NotRecognizedError(VoiceCommandException):
     pass
 
 
+WakeWord        = 'ar3'
+LanguageModel   = '/home/daniel/GitRepos/dev_ws/src/voice_move/voice_move/voiceCommands/ar3.lm'
+Dict            = '/home/daniel/GitRepos/dev_ws/src/voice_move/voice_move/voiceCommands/ar3.dict'
+TextOnly        = False  # For debug, when microphone is not available
+
 
 # To add a new voice command, item, etc.:
-# 1. Add to Enum
+# 1. Add to Enum below
 # 2. Add words to word list
-# 3. Add the function to VoiceCommander
-# 4. Add to VoiceCommander.voiceCmdFunc
+# 3. Add to VoiceCommander.voiceCmdFunc
+# 4. Add corresponding function to VoiceCommander
+# For steps 1 through 3, ensure consistent ordering between all three
 
 class VoiceCmd(Enum):
     IGNORE      = 0     # Do not try to execute a command
@@ -68,21 +79,19 @@ VoiceCmdWords   = [ ['ignore', 'never mind', 'wait'],
         
 ItemWords       = [ ['a can', 'the can', 'that can', 'this can', 'soda can'],
                     ['block', 'cube'],
-                    ['ball', 'sphere'],
-                    ['it'] ]
+                    ['ball', 'sphere'] ]
 
 DirectionWords  = [ ['left', 'clockwise'],
                     ['right', 'counter clockwise'],
                     ['up'],
                     ['down'] ]
 
+ConfirmWords    = ['yes', 'confirm', 'go ahead', 'do it']
+DenyWords       = ['no', 'deny', 'stop', 'wait', 'never mind', 'ignore', 'hold on']
+
 # Used for choosing which set of word lists to use for word parsing
 EnumType = [VoiceCmd, Item, Direction]
 Words = [VoiceCmdWords, ItemWords, DirectionWords]
-
-WakeWord        = 'ar3'
-LanguageModel   = 'ar3.lm'
-Dict            = 'ar3.dict'
 
 
 class VoiceCommander:
@@ -108,12 +117,12 @@ class VoiceCommander:
 
         if requestedItem != Item.NONE:
             if requestedItem != self.holdingItem:
-                raise OpenError(f'Unable to drop {requestedItem} because currently holding {self.holdingItem}')
+                raise OpenError(f"Can't drop {requestedItem} because currently holding {self.holdingItem}")
             
         if self.holdingItem == Item.NONE:
-            print('Attempting to open the claw')
+            self.tts('Attempting to open the claw')
         else:
-            print(f'Attempting to drop the {self.holdingItem}')
+            self.tts(f'Attempting to drop the {self.holdingItem}')
 
 
 
@@ -125,7 +134,7 @@ class VoiceCommander:
 
     def close(self):
 
-        print('Attempting to close the claw')
+        self.tts('Attempting to close the claw')
 
         # Send command to action server to close the claw
 
@@ -147,7 +156,7 @@ class VoiceCommander:
             else:
                 raise MoveError('A direction to turn must be specified')
 
-        print(f'Attempting to move {degrees} degrees {direction}')
+        self.tts(f'Attempting to move {degrees} degrees {direction}')
 
         # Calculate new position from current position + degrees to rotate
 
@@ -160,12 +169,12 @@ class VoiceCommander:
 
         # Make sure hand is currently empty
         if self.holdingItem != Item.NONE:
-            raise PickUpError(f'Cannot pick up {requestedItem}, already holding {self.holdingItem}')
+            raise PickUpError(f"Can't pick up {requestedItem}, already holding {self.holdingItem}")
 
         if requestedItem == Item.NONE:
-            raise PickUpError(f'Did not hear an item specified to pick up')
+            raise PickUpError(f'Did not hear a valid item specified to pick up')
 
-        print(f'Attempting to pick up {requestedItem}')
+        self.tts(f'Attempting to pick up {requestedItem}')
 
         # Send command to action server to open the claw
 
@@ -199,9 +208,9 @@ class VoiceCommander:
         if requestedItem != Item.NONE:
             # Make sure it is the currently held item
             if requestedItem != self.holdingItem:
-                raise SetDownError(f'Cannot set down {requestedItem}, not currently holding it')
+                raise SetDownError(f"Can't set down {requestedItem}, not currently holding it")
 
-        print(f'Attempting to set down {requestedItem}')
+        self.tts(f'Attempting to set down {requestedItem}')
 
         # Send command to action server to go down to the table/surface
 
@@ -228,10 +237,10 @@ class VoiceCommander:
 
                 # Make sure the requested item is currently being held
                 if requestedItem != self.holdingItem:
-                    raise GiveError(f'Cannot give you {requestedItem}, already holding {self.holdingItem}')
+                    raise GiveError(f"Can't give you {requestedItem}, already holding {self.holdingItem}")
 
 
-        print(f'Attempting to give {self.holdingItem} to the operator')
+        self.tts(f'Attempting to give {self.holdingItem} to the operator')
 
         # Move to current hand position, checking if hand has moved
         # While robot hand is beyond some threshold distance to operator hand
@@ -246,17 +255,19 @@ class VoiceCommander:
         # While item has not yet been grabbed by user
             # Ask ? whether the item is being grabbed by user
 
+        self.holdingItem = Item.NONE
+
         # Send command to action server to open the claw
 
 
     def ignore(self):
         
-        print('Ignoring')
+        self.tts('Ignoring')
 
 
     def nothing(self):
         
-        raise NotRecognizedError('No voice command was recognized')
+        raise NotRecognizedError("Sorry, I didn't get that.")
 
 
     def parseWords(self, wordsType):
@@ -276,17 +287,39 @@ class VoiceCommander:
         return EnumType[wordsType.value].NONE
 
 
+    def tts(self, phrase):
+
+        print(phrase)
+        speak(phrase)
+
+
     def run(self):
 
-        speech = LiveSpeech(
+        # For debug, if microphone is not available
+        if TextOnly:
+
+            while True:
+
+                self.currentPhrase = input('Enter a command: ')
+                requestedVoiceCmd = self.parseWords(WordsType.VOICECMD)
+
+                try:
+                    self.VoiceCmdFunc[requestedVoiceCmd.value]()
+                except VoiceCommandException as e:
+                    print(f'Error: {e}')
+
+                self.currentPhrase = None
+
+        self.speech = LiveSpeech(
             lm=LanguageModel,
             dic=Dict
         )
 
-        print(f"Listening for the wake word '{WakeWord}'...")
+        self.tts(f"Listening for the wake word {WakeWord}...")
 
         wakeWordSpoken = False
-        for phrase in speech:
+
+        for phrase in self.speech:
 
             if not wakeWordSpoken:
 
@@ -294,26 +327,44 @@ class VoiceCommander:
 
                     # Wait for the command in the next phrase
                     wakeWordSpoken = True
-                    print(f"Heard '{WakeWord}', waiting for a command...")
+                    self.tts(random.choice(['Yes?', 'Go on.', 'Go ahead.']))
                 
                 continue
 
-            # Only need to set self.currentPhrase if wake word was spoken
             self.currentPhrase = str(phrase)
-            print(f"Heard '{self.currentPhrase}'")
-
             requestedVoiceCmd = self.parseWords(WordsType.VOICECMD)
+            print(f"Heard '{self.currentPhrase}'")
 
             try:
                 self.VoiceCmdFunc[requestedVoiceCmd.value]()
             except VoiceCommandException as e:
-                print(f'Error: {e}')
+                self.tts(f'Error: {e}')
 
             wakeWordSpoken = False
             self.currentPhrase = None
 
-            print(f"\nListening for the wake word '{WakeWord}'...")
+            self.tts('Listening...')
 
 
-VoiceCommander = VoiceCommander()
-VoiceCommander.run()
+# class voice_move(Node):
+#     def __init__(self):
+#         super().__init__('voice_move')
+#         self._logger = self.get_logger()
+#         self._logger.info('voice commander init')
+# aseliufksuedifh sekiuhsefkuihsefo ihsefoihfhseio  efse
+#         self.create_subscription(Joy, '/joy', self._joy_cb, rclpy.qos.qos_profile_sensor_data)
+
+#         self.base_pub = self.create_publisher(Float32, '/move/j1', 10)
+
+#     def _joy_cb(self, msg):
+#         asd = msg.axes[1]
+#         self.base_pub.publish(Float32(data=asd))
+
+
+def main():
+    vc = VoiceCommander()
+    vc.run()
+
+
+if __name__ == '__main__':
+    main()
