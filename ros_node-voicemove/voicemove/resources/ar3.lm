@@ -1,0 +1,801 @@
+
+\data\
+ngram 1=217
+ngram 2=496
+ngram 3=75
+
+\1-grams:
+-0.927389	</s>
+-99	<s>	-0.2633025
+-2.554981	English	-0.1232651
+-2.276134	I	-0.1232651
+-2.554981	I'm	-0.1232651
+-1.945257	a	-0.1298478
+-2.554981	able	-0.1232652
+-2.554981	ah	-0.1232651
+-2.554981	all	-0.1232652
+-2.309698	also	-0.1232651
+-2.554981	am	-0.1232651
+-2.554981	an	-0.1232652
+-2.276134	and	-0.1232652
+-2.309698	apple	-0.1232651
+-2.554981	apricot	-0.1232651
+-2.484276	ar3	-0.1455714
+-2.136016	are	-0.1831803
+-2.554981	arm	-0.1232652
+-2.554981	arms	-0.1232651
+-2.309698	as	-0.1232651
+-2.554981	at	-0.1232652
+-2.554981	ay	-0.1232652
+-2.484276	ball	-0.1433201
+-2.484276	banana	-0.1433201
+-2.309698	be	-0.1232652
+-2.554981	below	-0.1232652
+-2.554981	best	-0.1232652
+-2.484276	block	-0.1433201
+-2.554981	bop	-0.1232651
+-2.554981	but	-0.1232652
+-2.030246	can	-0.2001237
+-2.309698	claw	-0.2527046
+-2.309698	close	-0.2051412
+-2.554981	concerns	-0.1232651
+-2.554981	conscience	-0.1232651
+-2.554981	cool	-0.1232651
+-2.484276	could	-0.2051412
+-2.554981	couple	-0.1232652
+-2.554981	cut	-0.1232651
+-2.554981	dangerous	-0.1232651
+-1.630039	degrees	-0.3655295
+-2.484276	do	-0.1232651
+-2.554981	doesn't	-0.1232651
+-2.554981	doing	-0.1232652
+-2.554981	don't	-0.1232651
+-2.030246	down	-0.1731316
+-2.309698	drop	-0.2527047
+-2.309698	eighty	-0.2051412
+-2.554981	ethical	-0.1232651
+-2.554981	expand	-0.1232651
+-2.554981	extra	-0.1232651
+-2.309698	false	-0.1232651
+-2.554981	familiar	-0.1232652
+-2.554981	fantastic	-0.1232651
+-2.554981	favorite	-0.1232651
+-2.484276	fifteen	-0.1433201
+-2.554981	fifty	-0.1232652
+-2.554981	filler	-0.1232651
+-2.554981	firmly	-0.1232652
+-2.136016	five	-0.3651688
+-2.554981	for	-0.1232651
+-2.554981	forever	-0.1232651
+-2.554981	forty	-0.1232652
+-2.554981	fourty	-0.1232651
+-2.309698	free	-0.2527046
+-2.554981	fruit	-0.1232652
+-2.554981	fruits	-0.1232652
+-2.554981	fun	-0.1232651
+-2.309698	get	-0.2051412
+-2.309698	gimme	-0.2527047
+-2.484276	give	-0.1351866
+-2.554981	go	-0.1232652
+-2.554981	gonna	-0.1232651
+-2.554981	good	-0.1232651
+-2.484276	grab	-0.1382189
+-2.309698	grasp	-0.1831803
+-2.136016	hand	-0.1731316
+-2.484276	have	-0.1232651
+-2.484276	here	-0.2051412
+-2.554981	hey	-0.1232651
+-2.554981	hundred	-0.1232652
+-2.484276	if	-0.2051412
+-2.554981	ignore	-0.1232651
+-2.554981	in	-0.1232651
+-2.554981	infamy	-0.1232651
+-2.554981	into	-0.1232652
+-2.554981	irrelevant	-0.1232651
+-2.484276	is	-0.1232651
+-1.501625	it	-0.3470554
+-2.554981	it's	-0.1232651
+-2.554981	its	-0.1232651
+-2.554981	job	-0.1232651
+-2.554981	knife	-0.1232651
+-2.554981	know	-0.1232652
+-2.554981	language	-0.1232651
+-2.554981	lanugage	-0.1232652
+-2.554981	leave	-0.1232652
+-2.484276	left	-0.1521903
+-2.309698	let	-0.2527047
+-2.554981	list	-0.1232652
+-2.554981	live	-0.1232651
+-2.554981	long	-0.1232652
+-2.554981	matter	-0.1232652
+-2.309698	maybe	-0.2527046
+-2.484276	me	-0.1831803
+-2.554981	might	-0.1232651
+-2.554981	mind	-0.1232651
+-2.554981	minimize	-0.1232652
+-2.309698	model	-0.2527046
+-2.554981	model's	-0.1232651
+-2.484276	move	-0.1232651
+-2.554981	my	-0.1232651
+-2.554981	need	-0.1232652
+-2.554981	needs	-0.1232652
+-2.309698	never	-0.2527047
+-2.554981	nice	-0.1232651
+-2.554981	nine	-0.1232651
+-2.309698	ninety	-0.2527047
+-2.309698	no	-0.1232652
+-2.554981	nothing	-0.1232652
+-2.554981	now	-0.1232652
+-2.554981	object	-0.1232651
+-2.136016	of	-0.2051412
+-2.309698	on	-0.1232652
+-2.276134	one	-0.1831803
+-2.554981	open	-0.1232652
+-2.554981	operator	-0.1232651
+-2.554981	or	-0.1232652
+-2.554981	orange	-0.1232651
+-2.554981	other	-0.1232651
+-2.309698	our	-0.1232652
+-2.554981	outside	-0.1232651
+-2.554981	pear	-0.1232651
+-2.554981	peel	-0.1232652
+-2.554981	phrase	-0.1232651
+-2.309698	phrases	-0.1232652
+-2.276134	pick	-0.2682588
+-2.276134	please	-0.1705177
+-2.554981	positive	-0.1232651
+-2.554981	positives	-0.1232651
+-2.554981	possible	-0.1232651
+-2.554981	pull	-0.1232651
+-2.554981	put	-0.1232651
+-2.554981	raise	-0.1232651
+-2.554981	rate	-0.1232652
+-2.554981	recognize	-0.1232651
+-2.554981	reduces	-0.1232651
+-2.309698	ree	-0.2527046
+-2.309698	release	-0.1232652
+-2.136016	right	-0.1564843
+-2.309698	robot	-0.1232651
+-2.554981	rotate	-0.1232652
+-2.554981	says	-0.1232652
+-2.554981	second	-0.1232651
+-2.484276	set	-0.2527046
+-2.554981	seventy	-0.1232651
+-2.554981	shoehorn	-0.1232651
+-2.554981	should	-0.1232651
+-2.554981	shouldn't	-0.1232652
+-2.554981	similar	-0.1232652
+-2.554981	six	-0.1232651
+-2.309698	sixty	-0.1232652
+-2.554981	so	-0.1232652
+-2.554981	some	-0.1232652
+-2.554981	someone	-0.1232651
+-2.484276	something	-0.2051412
+-2.554981	sound	-0.1232651
+-2.554981	spoken	-0.1232651
+-2.554981	stabbed	-0.1232651
+-2.554981	still	-0.1232651
+-2.554981	stuff	-0.1232651
+-2.309698	take	-0.2051412
+-2.554981	task	-0.1232651
+-2.309698	ten	-0.2527047
+-1.945257	that	-0.1705177
+-1.304082	the	-0.2475785
+-2.554981	these	-0.1232651
+-2.554981	things	-0.1232652
+-2.484276	thirty	-0.1831803
+-2.309698	this	-0.1232651
+-2.554981	though	-0.1232652
+-2.554981	thought	-0.1232651
+-2.484276	three	-0.2051412
+-1.669099	to	-0.1629548
+-2.554981	train	-0.1232651
+-2.554981	training	-0.1232651
+-2.554981	turn	-0.1232651
+-2.309698	twelve	-0.2527047
+-2.136016	twenty	-0.2351289
+-2.554981	twist	-0.1232651
+-2.309698	two	-0.1232651
+-2.554981	type	-0.1232651
+-2.484276	uh	-0.1232651
+-2.484276	uhh	-0.1232651
+-2.309698	um	-0.1232652
+-2.309698	umm	-0.1232651
+-2.276134	up	-0.1831803
+-2.554981	use	-0.1232652
+-2.554981	useless	-0.1232651
+-2.554981	very	-0.1232651
+-2.309698	wait	-0.2051412
+-2.554981	wake	-0.1232651
+-2.554981	want	-0.1232652
+-2.484276	we	-0.1232652
+-2.554981	we're	-0.1232651
+-2.309698	what	-0.1232652
+-2.554981	whatever	-0.1232652
+-2.554981	why	-0.1232652
+-2.554981	will	-0.1232652
+-2.484276	with	-0.1232651
+-2.554981	without	-0.1232651
+-2.554981	word	-0.1232651
+-2.030246	words	-0.3143101
+-2.484276	would	-0.1831803
+-2.554981	write	-0.1232652
+-2.484276	you	-0.1232651
+-2.309698	your	-0.2051412
+
+\2-grams:
+-2.072016	<s> I
+-2.510955	<s> I'm
+-2.510955	<s> ah
+-2.351471	<s> and
+-2.372946	<s> apple
+-2.510955	<s> apricot
+-1.193228	<s> ar3	-0.106434
+-2.255607	<s> are
+-2.163895	<s> ay	-0.1525484
+-2.474674	<s> banana
+-2.510955	<s> below
+-2.510955	<s> bop
+-1.971793	<s> can	-0.2651552
+-2.083168	<s> close
+-2.510955	<s> cool
+-2.474674	<s> could
+-2.132391	<s> do	-0.2651552
+-2.510955	<s> doesn't
+-2.096368	<s> drop	-0.1468107
+-2.510955	<s> fantastic
+-2.510955	<s> firmly
+-2.083168	<s> get
+-2.083168	<s> gimme	-0.2651552
+-2.132391	<s> give
+-2.510955	<s> good
+-2.147203	<s> grab	-0.1551153
+-2.096368	<s> grasp
+-2.01902	<s> hand
+-2.474674	<s> have
+-2.132391	<s> here	-0.2651552
+-1.414515	<s> hey	-0.1100757
+-2.474674	<s> if
+-2.510955	<s> ignore
+-1.647452	<s> it
+-2.148514	<s> leave
+-2.096368	<s> let	-0.1593523
+-2.372946	<s> maybe
+-1.114947	<s> move	-0.1288264
+-2.510955	<s> my
+-2.372946	<s> never
+-2.510955	<s> nice
+-2.372946	<s> no
+-2.163895	<s> now
+-2.255607	<s> of
+-2.372946	<s> on
+-2.163895	<s> open	-0.1526322
+-2.510955	<s> orange
+-2.510955	<s> other
+-2.510955	<s> pear
+-2.510955	<s> peel
+-2.351471	<s> pick
+-2.084877	<s> please	-0.1558526
+-2.510955	<s> pull
+-2.148514	<s> put
+-2.372946	<s> release
+-2.148514	<s> rotate
+-2.147203	<s> set	-0.1475396
+-2.510955	<s> so
+-2.510955	<s> spoken
+-2.083168	<s> take
+-1.7483	<s> that	-0.1113207
+-2.372946	<s> this
+-1.762749	<s> to
+-1.291067	<s> turn	-0.08356892
+-2.510955	<s> twist
+-2.147203	<s> uh
+-2.147203	<s> uhh
+-2.083168	<s> um
+-2.372946	<s> umm
+-2.083168	<s> wait
+-2.474674	<s> we
+-2.372946	<s> what
+-2.474674	<s> with
+-2.510955	<s> without
+-2.177124	<s> words
+-0.4735377	English </s>
+-1.288036	I am
+-1.248388	I can
+-1.288036	I don't
+-1.288036	I want
+-1.288036	I write
+-0.6034485	I'm gonna
+-1.52451	a banana
+-1.463785	a can
+-1.529851	a couple
+-1.018816	a hundred	-0.1525484
+-1.529851	a knife
+-1.503311	a one
+-1.52451	a three
+-0.5796575	able to
+-0.4735377	ah </s>
+-0.5975516	all of
+-0.8995579	also have
+-0.900838	also very
+-0.6034485	am training
+-0.6006823	an apple
+-0.8216937	and </s>
+-1.192163	and fifteen
+-1.183983	and our
+-1.183983	and phrases
+-0.6725531	apple </s>
+-0.900838	apple or
+-0.4735377	apricot </s>
+-0.8256481	ar3 </s>
+-1.64756	ar3 close
+-1.67054	ar3 could
+-1.64756	ar3 drop
+-1.64756	ar3 gimme	-0.2651552
+-1.615522	ar3 hand
+-1.153575	ar3 move
+-1.64756	ar3 never
+-1.64216	ar3 please
+-1.67054	ar3 uh
+-0.9649264	are </s>
+-1.467213	are free
+-0.9503368	are some
+-1.480979	are three
+-1.480979	are we
+-0.949087	are you	-0.2651552
+-0.5796575	arm to
+-0.6034485	arms though
+-0.900838	as it's
+-0.900838	as long
+-0.5975516	at hand
+-0.8892196	ay are
+-0.8953688	ay ree
+-0.4364524	ball </s>
+-0.4364524	banana </s>
+-1.073319	be able
+-1.073319	be dangerous
+-1.065208	be on
+-0.5975516	below are
+-0.5796575	best to
+-0.4364524	block </s>
+-0.5673129	bop it
+-0.6006823	but also
+-0.471241	can </s>
+-1.385271	can down
+-1.431117	can type
+-1.42749	can you
+-0.2948165	claw </s>
+-0.434388	close </s>
+-0.9456691	close the
+-0.4735377	concerns </s>
+-0.4735377	conscience </s>
+-0.4735377	cool </s>
+-1.068419	could also
+-0.5284965	could you
+-0.5975516	couple of
+-0.6034485	cut an
+-0.6034485	dangerous but
+-0.3024544	degrees </s>
+-1.816673	degrees down
+-1.898075	degrees left
+-1.842149	degrees right	-0.2651552
+-1.322732	degrees to	-0.284291
+-1.898075	degrees uhh
+-1.391353	degrees up	-0.1593523
+-1.041396	do a
+-1.073319	do its
+-1.071416	do with
+-0.6034485	doesn't matter
+-0.5923633	doing that
+-0.6034485	don't know
+-0.6578178	down </s>
+-1.351895	down ten	-0.2651552
+-0.7438208	down the	-0.07963848
+-0.6230923	drop it	-0.1593523
+-0.6049852	drop the	-0.2651552
+-0.8066849	eighty </s>
+-0.5104414	eighty degrees	-0.1560122
+-0.6034485	ethical concerns
+-0.54594	expand the
+-0.6034485	extra useless
+-0.900838	false positive
+-0.900838	false positives
+-0.6028026	familiar with
+-0.4735377	fantastic </s>
+-0.6034485	favorite fruit
+-0.5258819	fifteen degrees	-0.1238342
+-0.5975516	fifty five
+-0.5949497	filler words
+-0.6006823	firmly grasp
+-0.2375018	five degrees	-0.198637
+-0.54594	for the
+-0.6034485	forever live
+-0.5975516	forty five
+-0.5771604	fourty degrees
+-0.2948165	free </s>
+-0.6028026	fruit is
+-0.6028026	fruits here
+-0.4735377	fun </s>
+-1.048463	get that
+-0.4880389	get the
+-0.3289228	gimme the	-0.1087829
+-1.139672	give it
+-0.7668757	give me	-0.1459006
+-1.066564	give the
+-0.5975516	go of	-0.1121509
+-0.6034485	gonna list
+-0.6034485	good job
+-1.154732	grab that
+-0.6074318	grab the	-0.1593523
+-0.6175543	grasp it	-0.2651552
+-1.025304	grasp the
+-1.187149	grasp your
+-0.6451473	hand </s>
+-1.205297	hand it
+-0.84545	hand me	-0.1593522
+-0.9743345	have it
+-1.073319	have nothing
+-0.9217272	have the
+-0.434388	here </s>
+-1.060846	here are	-0.2651552
+-1.192163	hey ar3
+-1.17211	hey are
+-1.183983	hey ree
+-1.192163	hey three
+-0.894358	hundred and
+-0.8892196	hundred twenty	-0.2651552
+-0.4880389	if the
+-1.075176	if we're
+-0.4735377	ignore </s>
+-0.6034485	in infamy
+-0.4735377	infamy </s>
+-0.6028026	into something
+-0.6034485	irrelevant stuff
+-1.071416	is banana
+-1.073319	is familiar
+-1.073319	is why
+-0.3316526	it </s>
+-1.845925	it cut
+-1.764467	it down	-0.2651552
+-1.839229	it is
+-1.845925	it might
+-1.845925	it needs
+-1.251256	it to	-0.2651552
+-1.845925	it will
+-1.839229	it would
+-0.6034485	it's English
+-0.6034485	its best
+-0.4735377	job </s>
+-0.4735377	knife </s>
+-0.6028026	know if
+-0.6034485	language model's
+-0.6006823	lanugage model
+-0.8318802	leave it
+-0.7933542	leave the
+-0.7132193	left </s>
+-1.483456	left fifty
+-1.443241	left five
+-1.483456	left seventy
+-1.483456	left six
+-1.478893	left thirty
+-1.464195	left twelve
+-0.3538837	let go	-0.284291
+-0.5923633	list a
+-0.6034485	live in
+-0.6006823	long as
+-0.6006823	matter what
+-0.3536137	maybe we
+-0.8560517	me </s>
+-1.083867	me it
+-0.5966411	me the	-0.07963848
+-0.6034485	might raise
+-0.4735377	mind </s>
+-0.6006823	minimize false
+-0.2948165	model </s>
+-0.6034485	model's possible
+-1.535624	move a
+-1.558863	move down	-0.2651552
+-1.64417	move forty
+-1.637128	move left
+-1.614714	move ninety
+-1.609443	move one
+-1.583417	move right
+-1.614714	move ten
+-1.637128	move thirty
+-1.435073	move to
+-1.614714	move twelve
+-1.609443	move up
+-0.6034485	my favorite
+-0.6006823	need two
+-0.5796575	needs to
+-0.3538837	never mind	-0.2651552
+-0.4735377	nice </s>
+-0.5771604	nine degrees
+-0.3427056	ninety degrees
+-0.6725531	no </s>
+-0.8953688	no wait
+-0.5796575	nothing to
+-1.065208	now get
+-1.056147	now hand
+-1.065208	now release
+-0.4735377	object </s>
+-1.367327	of fruits
+-1.215895	of it	-0.1593523
+-0.7495599	of the
+-0.8236019	of this
+-0.8953688	on our
+-0.900838	on second
+-0.6501603	one eighty
+-1.194319	one fifteen
+-1.176713	one twenty
+-0.7933542	open the
+-0.8953688	open your
+-0.6034485	operator says
+-0.6028026	or something
+-0.4735377	orange </s>
+-0.5949497	other words
+-0.900838	our conscience
+-0.8953688	our robot
+-0.4735377	outside </s>
+-0.4735377	pear </s>
+-0.5923633	peel a
+-0.6034485	phrase into
+-0.6725531	phrases </s>
+-0.8791218	phrases that
+-0.3337949	pick up	-0.1094048
+-1.287056	please give
+-1.287056	please grab
+-1.275753	please pick
+-0.7479384	please set	-0.2651552
+-0.6034485	positive rate
+-0.6034485	positives for
+-0.5949497	possible words
+-0.5673129	pull it
+-0.8841414	put down
+-0.7933542	put the
+-0.6034485	raise ethical
+-0.5975516	rate of
+-0.6034485	recognize things
+-0.54594	reduces the
+-0.2948165	ree </s>
+-0.8318802	release it
+-0.7933542	release the
+-0.6809343	right </s>
+-1.428945	right fourty
+-1.409006	right one
+-1.412076	right sixty
+-1.393621	right twenty
+-1.412076	right um
+-1.073319	robot stabbed
+-1.073319	robot use
+-1.071416	robot would
+-0.8892196	rotate right
+-0.854859	rotate to
+-0.6028026	says something
+-0.6034485	second thought
+-0.6463002	set down	-0.284291
+-0.6230923	set it	-0.2651552
+-0.5771604	seventy degrees
+-0.54594	shoehorn the
+-0.6034485	should train
+-0.6028026	shouldn't have
+-0.5796575	similar to
+-0.5771604	six degrees
+-0.6725531	sixty </s>
+-0.8953688	sixty two
+-0.6006823	so maybe
+-1.073319	some filler
+-1.065208	some phrases
+-1.048708	some words
+-0.4735377	someone </s>
+-0.434388	something </s>
+-1.075176	something outside
+-0.6034485	sound similar
+-0.6034485	spoken phrase
+-0.6034485	stabbed someone
+-0.6034485	still doing
+-0.4735377	stuff </s>
+-0.9913476	take it
+-0.4880389	take the
+-0.6034485	task at
+-0.3427056	ten degrees	-0.1238342
+-0.7745703	that </s>
+-1.569851	that ball
+-1.569851	that block
+-1.024437	that can	-0.2651552
+-1.569851	that is
+-1.337385	that it
+-1.575251	that sound
+-1.569851	that would
+-1.135635	the </s>
+-2.101737	the arm
+-1.126343	the ball	-0.6364735
+-1.30877	the block	-0.284291
+-0.8878639	the can	-0.4995283
+-1.612732	the claw	-0.1593523
+-2.040598	the false
+-2.101737	the language
+-2.086708	the left	-0.06976753
+-1.595258	the model	-0.2651552
+-1.31124	the object	-0.284291
+-2.101737	the operator
+-1.980039	the right	-0.1593523
+-1.595258	the robot
+-2.101737	the task
+-2.086708	the uh
+-2.086708	the uhh
+-2.040598	the umm
+-2.101737	the wake
+-0.6034485	these extra
+-0.5923633	things that
+-0.6271824	thirty degrees
+-1.176713	thirty five
+-1.196519	thirty nine
+-1.073319	this irrelevant
+-1.073319	this lanugage
+-1.073319	this reduces
+-0.6001691	though and
+-0.5673129	thought it
+-0.434388	three </s>
+-1.068419	three sixty
+-0.9990164	to </s>
+-1.672415	to ar3
+-1.650221	to be
+-1.672415	to do
+-1.679385	to expand
+-1.672415	to me	-0.2651552
+-1.679385	to minimize
+-1.679385	to recognize
+-1.679385	to shoehorn
+-0.7547235	to the	-0.3354435
+-0.54594	train the
+-0.54594	training the
+-1.409039	turn eighty	-0.2651552
+-1.409039	turn ninety
+-1.405749	turn one
+-1.389285	turn right
+-1.422862	turn thirty
+-1.288778	turn to	-0.1593522
+-1.389285	turn twenty
+-0.3427056	twelve degrees
+-0.417608	twenty degrees	-0.05376146
+-1.270225	twenty five
+-0.5673129	twist it
+-0.900838	two arms
+-0.8501649	two degrees
+-0.6034485	type whatever
+-0.8588269	uh </s>
+-1.248388	uh can
+-1.272398	uh pick
+-1.272398	uh please
+-1.284921	uh set
+-0.8588269	uhh </s>
+-1.284921	uhh ball
+-1.274816	uhh let
+-1.284921	uhh move
+-1.272398	uhh up
+-0.766093	um </s>
+-1.041396	um a
+-1.063714	um please
+-0.6725531	umm </s>
+-0.8995579	umm block
+-0.7262802	up </s>
+-0.9291229	up a
+-1.480979	up fifteen
+-1.416486	up that
+-1.197555	up the	-0.2651552
+-1.447536	up twenty
+-0.5923633	use a
+-0.5949497	useless words
+-0.6034485	very fun
+-0.434388	wait </s>
+-1.068419	wait no
+-0.6034485	wake word
+-0.6028026	want here
+-0.8216937	we </s>
+-1.192163	we could
+-1.194677	we should
+-1.194677	we shouldn't
+-0.6034485	we're still
+-0.894358	what I
+-0.8995579	what if
+-0.6001691	whatever I
+-0.6001691	why I
+-0.6028026	will do
+-0.766093	with </s>
+-1.073319	with all
+-0.9217272	with the
+-0.6034485	without these
+-0.4735377	word </s>
+-0.2747475	words </s>
+-1.359004	words and
+-0.6501603	would be
+-1.196519	would forever
+-1.196519	would need
+-0.6006823	write as
+-1.274816	you free	-0.2651552
+-1.284921	you give
+-1.284921	you grab
+-1.272398	you pick
+-1.274816	you take
+-0.5270156	your claw	-0.2651552
+-1.060846	your hand
+
+\3-grams:
+-1.03808	<s> ar3 drop
+-1.03808	<s> ar3 gimme
+-0.9054043	<s> ar3 move
+-0.2858141	here are some
+-0.4122591	<s> ay are
+-0.06875182	the ball </s>
+-0.1735543	the block </s>
+-0.3212658	<s> can you
+-0.1935282	that can </s>
+-0.1021581	the can </s>
+-0.1814045	the claw </s>
+-0.1352608	your claw </s>
+-0.4749602	eighty degrees to
+-0.2056416	fifteen degrees </s>
+-0.3012768	five degrees </s>
+-0.7169678	five degrees right
+-0.2056416	ten degrees </s>
+-0.2543235	twenty degrees </s>
+-0.2955816	<s> do a
+-0.2393137	it down </s>
+-0.3177687	move down ten
+-0.2410243	set down the
+-0.3403704	<s> drop it
+-0.2044024	turn eighty degrees
+-0.1352608	you free </s>
+-0.1477756	<s> gimme the
+-0.1477756	ar3 gimme the
+-0.2135184	let go of
+-0.4567531	<s> grab that
+-0.2974403	<s> here are
+-0.7908074	<s> hey ar3
+-0.7849265	<s> hey are
+-0.4122591	a hundred twenty
+-0.2006717	drop it </s>
+-0.1487505	grasp it </s>
+-0.2006717	of it </s>
+-0.3313491	set it down
+-0.7528197	the left thirty
+-0.2119222	<s> let go
+-0.3313827	give me the
+-0.3164783	hand me the
+-0.2736062	to me </s>
+-0.194185	never mind </s>
+-0.1352608	the model </s>
+-1.074147	<s> move down
+-1.090619	<s> move left
+-1.076775	<s> move right
+-1.08223	<s> move up
+-0.1837565	the object </s>
+-0.5613433	go of it
+-0.4135609	<s> open your
+-0.4716026	<s> please give
+-0.2440029	degrees right </s>
+-0.3452604	the right </s>
+-0.3479612	<s> set down
+-0.2369023	please set down
+-0.1526577	down ten degrees
+-0.6073971	<s> that would
+-0.5601725	down the can
+-0.3031707	drop the ball
+-0.5532022	gimme the ball
+-0.4449862	grab the ball
+-0.5601725	me the can
+-0.3570458	to the left
+-0.9697438	to the right
+-0.2779852	up the can
+-0.2427858	degrees to the
+-0.3293	it to me
+-0.3675284	turn to the
+-0.9211988	<s> turn eighty
+-0.886919	<s> turn to
+-0.1774735	hundred twenty degrees
+-0.3592568	degrees up </s>
+-0.5654147	pick up the
+-0.313555	are you free
+
+\end\

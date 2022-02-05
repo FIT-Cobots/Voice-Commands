@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from text_to_speech import speak
+# from text_to_speech import speak
 
 
 import random
@@ -26,8 +26,8 @@ class NotRecognizedError(VoiceCommandException):
 
 
 WakeWord        = 'ar3'
-LanguageModel   = '/home/daniel/GitRepos/dev_ws/src/voice_move/voice_move/voiceCommands/ar3.lm'
-Dict            = '/home/daniel/GitRepos/dev_ws/src/voice_move/voice_move/voiceCommands/ar3.dict'
+LanguageModel   = '/home/daniel/Repos/Cobots/Voice-Commands/ar3.lm'
+Dict            = '/home/daniel/Repos/Cobots/Voice-Commands/ar3.dict'
 TextOnly        = False  # For debug, when microphone is not available
 
 
@@ -290,7 +290,7 @@ class VoiceCommander:
     def tts(self, phrase):
 
         print(phrase)
-        speak(phrase)
+        # speak(phrase)
 
 
     def run(self):
