@@ -1,7 +1,8 @@
 # AR3 Voice Commands
 
-Note: This repo is not integrated with ROS, for that you need to use the Control-Software repo.
-If you need to compile the language model for Pocketsphinx, go to step 4.
+# NOTE: DEPRECATED
+# This repo is not integrated with ROS, for that you need to use the Control-Software repo.
+# If you need to compile the language model for Pocketsphinx, go to step 4.
 
 
 # Installation
